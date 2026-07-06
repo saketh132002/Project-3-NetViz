@@ -1,0 +1,366 @@
+/* ===== Global & Layout ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: #141414;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  .sidebar {
+    width: 240px;
+    background: #181818;
+    padding: 16px;
+    border-right: 1px solid #333;
+  }
+  .main-content {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+  }
+  
+  /* ===== Sidebar Content ===== */
+  .sidebar {
+    background-color: #141414;
+    width: 200px;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* align everything to left */
+  }
+  
+  .logo-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .netflix-logo img {
+    width: 40px;
+    height: 40px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    margin-bottom: 8px;
+  }
+  
+  .netflix-logo img:hover {
+    filter: drop-shadow(0 0 8px #e50914);
+    transform: scale(1.05);
+  }
+  
+  .dashboard-title {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .subtitle {
+    color: #aaa;
+    font-size: 11px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .nav-button {
+    background: none;
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #333;
+    transform: scale(1.08);
+  }
+  
+  .nav-icon {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 5px;
+    filter: brightness(0) invert(1);
+  }
+
+  .page {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .page.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  
+  
+  
+  /* ===== Tabs ===== */
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .tab {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: #bbb;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+  }
+  .tab.active {
+    background: #e50914;
+    color: #fff;
+  }
+
+
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .nav-buttons button {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .nav-buttons button:hover {
+    background-color: #333;
+  }
+
+  .sidebar {
+    background-color: #141414;
+    width: 200px;
+    height: 100vh;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .netflix-logo {
+    margin-bottom: 30px;
+  }
+  
+  .netflix-logo img {
+    width: 80px;
+    height: 120px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+  
+  .netflix-logo img:hover {
+    filter: drop-shadow(0 0 8px #e50914);
+    transform: scale(1.05);
+  }
+  
+  
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  
+  /* ===== Grid Layouts ===== */
+  .grid-top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  .grid-bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  .panel {
+    background: #181818;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 16px;
+  }
+  .panel h3 {
+    margin: 0 0 16px;
+    font-size: 1.125rem;
+  }
+  
+  /* ===== Bar Chart ===== */
+  #charBarSvg {
+    overflow: visible;
+  }
+  
+  /* ===== Donut Chart Panel ===== */
+  #donutCharts {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #donutCharts {
+       display: flex;
+       flex-direction: column;   /* ← stack vertically */
+       align-items: center;      /* ← center each block */
+       gap: 12px;                /* ← space between donut/buttons/legend */
+       width: max-content;       /* ← shrink-wrap to fit only those items */
+       margin: 0 auto;           /* ← optional: center panel in its cell */
+     }
+  /* Each donut container flex: none so JS size applies */
+  #donutCharts > div {
+    flex: none;
+  }
+
+  #resetBtn {
+    margin-top: 8px;
+    padding: 6px 12px;
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+  #resetBtn:hover {
+    background: #f6121d;
+  }
+  
+  
+  /* ===== Bubble Chart ===== */
+  #bubbleSvg {
+    width: 100%;
+    height: 300px;
+    overflow: visible;
+  }
+  .legend {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+  .legend-color {
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    border-radius: 2px;
+  }
+  
+  /* ===== Tooltip ===== */
+  /* ===== Tooltip ===== */
+.tooltip {
+    position: absolute;
+    z-index: 9999;              /* sit on top of everything */
+    pointer-events: none;       /* don’t block mouse events */
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    line-height: 1.2;
+    visibility: hidden;         /* start hidden */
+    transition: opacity 0.2s;   /* fade in/out */
+  }
+  
+  /* when you show it in JS, also flip visibility */
+  .tooltip.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  
+  /* ===== Heatmap Placeholder ===== */
+  .heatmap-placeholder {
+    background: #181818;
+    border: 1px solid #333;
+    border-radius: 4px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .page {
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+  
+  /* ────────────────────────────────────── */
+
+  /* make main-content stack header + tree and stretch the tree */
+.main-content {
+    display: flex;
+    flex-direction: column;  /* stack title above the tree */
+  }
+  
+  /* allow the tree container to take all remaining height */
+  .tree-container {
+    flex: 1;                 /* fill vertical space under the <h1> */
+    width: 100%;             /* full width of main-content */
+  }
+  
+  /* stretch the svg to its container’s size */
+  #characterTree {
+    width: 100%  !important;
+    height: 100% !important;
+    display: block;          /* remove inline SVG whitespace */
+  }
+  
+
+  /* legend directly under donut + buttons */
+#episodeLegend {
+  display: flex;             /* lay out swatches in a row */
+  flex-wrap: wrap;           /* wrap to a new line when too wide */
+  justify-content: center;   /* center under the donut/buttons */
+  gap: 6px;                  /* space between items */
+  font-size: 14px;           /* larger text */
+  margin-top: 8px;           /* breathing room above */
+  max-width: 400px;          /* lock it to the donut’s width */
+}
+
+/* each swatch+label */
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #fff;
+}
+
+.legend-color {
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+}

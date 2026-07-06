@@ -1,0 +1,273 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background: #f0f4f8;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+select {
+  padding: 5px 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#network-graph {
+  width: 100%;             /* take all the main-content width */
+  height: calc(100vh - 200px); /* leave room for header + controls */
+  max-width: 1200px;       /* optional cap if you like */
+  margin: 20px auto;       /* center it with some breathing room */
+  background-color: #141414; /* match your dark theme */
+  border: 1px solid #555;
+}
+
+/* Search input & play button */
+#searchInput {
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Info panel */
+#info-panel {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  width: 250px;
+  padding: 20px;
+  background: white;
+  border-left: 1px solid #ccc;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+
+#info-panel.hidden {
+  transform: translateX(100%);
+}
+
+#info-panel button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Link styling */
+.link {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+/* Hover-only label */
+.hover-label {
+  font-size: 12px;
+  font-weight: bold;
+  fill: #333;
+  pointer-events: none;
+}
+
+/* Node circles & labels */
+.node circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  pointer-events: none;
+  font-size: 12px;
+  fill: #333;
+}
+
+/* Tooltip styling */
+.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 6px;
+  font-size: 12px;
+  background: lightsteelblue;
+  border: 1px solid #333;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+}
+css body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background: #f0f4f8;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+select {
+  padding: 5px 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#network-graph {
+  width: 800px;
+  height: 600px;
+  margin: 0 auto 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Search input & play button */
+#searchInput {
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#playBtn {
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+/* Info panel */
+#info-panel {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  width: 250px;
+  padding: 20px;
+  background: white;
+  border-left: 1px solid #ccc;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+
+#info-panel.hidden {
+  transform: translateX(100%);
+}
+
+#info-panel button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ─── dark background ─────────────────────────────────────────── */
+body {
+  background: #141414 !important;
+  color: #fff;
+  margin: 0;         /* remove your default 40px margin */
+}
+
+/* shrink your outer <body> margin now that we have a sidebar */
+.controls,
+h1 {
+  color: #fff;
+}
+
+/* style your selects and search to play nicely on dark */
+.controls label {
+  color: #fff;
+}
+.controls select,
+#searchInput {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+/* Container + main now come from character.css, no need to redefine */
+
+/* ─── network graph ──────────────────────────────────────────── */
+/* make the link (interaction lines) white */
+.link {
+  stroke: #fff;
+  stroke-opacity: 0.6;
+}
+
+/* transparent background under the SVG so sidebar shows through */
+#network-graph svg {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  background: none !important;
+  background-color: #141414;
+}
+
+/* ─── info panel ─────────────────────────────────────────────── */
+#info-panel {
+  background: #1f1f1f !important;
+  color: #fff !important;
+  border-left: 1px solid #555;
+}
+
+/* ensure the labels inside info panel are white */
+#info-panel h2,
+#info-panel p,
+#info-panel strong,
+#info-panel li {
+  color: #fff !important;
+}
+
+/* close button contrast */
+#info-panel button {
+  color: #ccc;
+}
+
+/* at the bottom of interaction_style.css */
+
+/* replace the old white background… */
+#network-graph {
+  /* background-color: #ffffff; */
+  background-color: #141414 !important;  /* Netflix‐style black */
+  border: 1px solid #555;                /* softer than light gray */
+}
+
+/* make all the node text labels white on black */
+#network-graph .node text {
+  fill: #fff !important;
+}
+
+/* if you’re showing link counts on hover, turn those white too */
+#network-graph .hover-label {
+  fill: #fff !important;
+}
+

@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    background-color: #141414;
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .netflix-logo img {
+    width: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-content {
+    text-align: center;
+  }
+  
+  .dashboard-title {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .character-main {
+    flex-grow: 1;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .page-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .tree-container {
+    width: 100%;
+    height: calc(100% - 60px); /* leave space for title */
+  }
+  
+  #characterTree {
+    width: 100%;
+    height: 100%;
+  }
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  .sidebar {
+    width: 200px;
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .main-content {
+    flex-grow: 1;
+    background-color: #141414;
+    overflow: auto;
+    padding: 20px;
+  }
+  
+  /* 1) On your main flex‐column container */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;      /* fill the rest of the body’s height */
+    min-height: 0;     /* allow its children to shrink/grow */
+    padding: 20px;
+    overflow: hidden;  /* or auto, but hidden will avoid double scrollbars */
+  }
+  
+  /* 2) On the tree wrapper */
+  .tree-container {
+    flex: 1;          /* take all vertical space left under the <h1> */
+    min-height: 0;    /* critical—lets it actually flex to 0–100% */
+    width: 100%;
+  }
+  
+  /* 3) And make sure your SVG truly fills its parent */
+  #characterTree {
+    display: block;    /* avoids inline-SVG weirdness */
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  
+    /* ← add these two: */
+    flex: 1;        /* allow it to fill the body’s main axis (width) */
+    width: 100%;    /* make it span the full viewport width */
+  }

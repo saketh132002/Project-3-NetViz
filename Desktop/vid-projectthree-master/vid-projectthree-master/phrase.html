@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Office – Phrase Tracker 📺</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- 1) Your Netflix sidebar & layout styles: -->
+  <link rel="stylesheet" href="character.css" />
+
+  <!-- 2) Your page-specific overrides: -->
+  <link rel="stylesheet" href="phrase.css" />
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar (identical to character.html, except mark Phrase Search active) -->
+    <aside class="sidebar">
+      <div class="netflix-logo">
+        <img src="icons/netflix-n.png" alt="Netflix Logo"/>
+      </div>
+      <div class="sidebar-content">
+        <h2 class="dashboard-title">The Office Dashboard</h2>
+        <p class="subtitle">
+          Run: Mar 24, 2005 – May 16, 2013<br/>
+          NBC | Mockumentary Comedy
+        </p>
+        <nav class="nav-buttons">
+          <a href="index.html"         class="nav-button"><div data-lucide="home"  class="nav-icon"></div><span>Overview</span></a>
+          <a href="character.html"     class="nav-button"><div data-lucide="users" class="nav-icon"></div><span>Org Chart</span></a>
+          <a href="interactions.html"  class="nav-button"><div data-lucide="play"  class="nav-icon"></div><span>Explore</span></a>
+          <a href="phrase.html"        class="nav-button active"><div data-lucide="search" class="nav-icon"></div><span>Phrase Search</span></a>
+          <a href="cloud.html" class="nav-button">
+            <div data-lucide="cloud" class="nav-icon"></div>
+            <span>Word Cloud</span>
+          </a>
+          <a href="charactertiles.html" class="nav-button">
+            <div data-lucide="laugh" class="nav-icon"></div>
+            <span>Meet the people</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Phrase Search Page -->
+      <section id="phrasePage" class="page active">
+        <h1>The Office – Phrase Tracker 📺</h1>
+
+        <div class="controls" style="text-align:center; margin-bottom:20px;">
+          <input id="search" type="text"
+                 placeholder="Enter a phrase (ex: paper, conference, Michael)"/>
+          <button onclick="searchPhrase()">Search</button>
+        </div>
+
+        <div id="line-chart"   class="panel"></div>
+        <div id="location-info" class="panel"></div>
+
+        <div id="loading"     class="panel" style="display:none;">🔄 Searching…</div>
+        <div id="toast" class="panel" style="visibility:hidden;">✅ Search Complete</div>
+
+      </section>
+    </main>
+  </div>
+
+  <script>lucide.createIcons();</script>
+  <script src="phrase.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+/* General Page Styling */
+body {
+    background-color: #f3f3f3;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #222222;
+    margin: 0;
+    padding: 0;
+  }
+  #banner {
+    max-width: 1200px;
+    margin: 20px auto 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  #timeline {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+  }
+  
+  #timeline h3,
+  #overview h2,
+  #characters h3 {
+    font-size: 36px;
+  }
+  
+  #overview {
+    font-size: 22px;
+  }
+  
+  .season-timeline {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .season-block {
+    flex: 1;
+    min-width: 80px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 2px solid #003366;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #003366;
+    font-size: 20px;
+  }
+  
+  .season-block span {
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 5px;
+    color: #555;
+  }
+  
+  .character-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .character-card {
+    width: 180px;
+    text-align: center;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .character-card img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+  
+  .character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .character-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+  
+  .character-card p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #003366;
+    font-size: 20px;
+  }
+  ------- #characters,
+  #overview,
+  #timeline {
+    background-color: transparent;
+  }
+  
+  /* Headings */
+  h1,
+  h2,
+  h3 {
+    font-family: "Georgia", "American Typewriter", serif;
+    color: #003366;
+  }
+  
+  /* Overview Container */
+  #overview,
+  #characters {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .character-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .character-card {
+    width: 160px;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .character-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+  
+  .character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .character-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+  
+  .character-card p {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #003366;
+  }
+  
+  .tooltip {
+    position: absolute;
+    text-align: left;
+    padding: 8px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  #sort-toggle {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 10px 16px;
+    background: #003366;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .bar-label {
+    font-size: 12px;
+    fill: #333;
+  }
+  
+  .total-line-title h2{
+    text-align: center;
+      color: #003366;
+  } 
+  body{
+    font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f9f9f9;
+  }
+
+  /* ── Dark background & white text ── */
+body {
+    margin: 0;
+    background: #141414;
+    color: #fff;
+  }
+  
+  /* Panels & main splitting come from character.css */
+  /* We only need to override our grid + cards now */
+  
+  /* Center the grid within the page */
+  .character-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Darken card background and white-ify text */
+  .character-card {
+    width: 160px;
+    text-align: center;
+    background-color: #1f1f1f;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .character-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+  
+  .character-card p {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(255,255,255,0.2);
+  }
+  
+  .character-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+  
+  /* Page title in white */
+  .page-title {
+    color: #fff;
+    text-align: center;
+    margin: 20px 0;
+  }
+  

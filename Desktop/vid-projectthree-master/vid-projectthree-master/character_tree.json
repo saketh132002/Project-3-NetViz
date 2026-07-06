@@ -1,0 +1,120 @@
+{
+    "name": "David Wallace",
+    "title": "CEO, Dunder Mifflin",
+    "group": "Corporate",
+    "children": [
+      {
+        "name": "Jan Levinson",
+        "title": "VP of Northeast Sales",
+        "group": "Corporate",
+        "children": [
+          {
+            "name": "Stamford Branch",
+            "title": "Former Branch",
+            "group": "Stamford Branch",
+            "children": [
+              { "name": "Josh Porter", "title": "Branch Manager", "group": "Stamford Branch" },
+              { "name": "Andy Bernard", "title": "Sales Rep", "group": "Stamford Branch" },
+              { "name": "Karen Filippelli", "title": "Sales Rep", "group": "Stamford Branch" },
+              { "name": "Martin Nash", "title": "Accountant", "group": "Stamford Branch" },
+              { "name": "Tony Gardner", "title": "Sales Rep", "group": "Stamford Branch" },
+              { "name": "Hannah Smoterich-Barr", "title": "Sales Rep", "group": "Stamford Branch" }
+            ]
+          },
+          {
+            "name": "Scranton Branch",
+            "title": "Active Branch",
+            "group": "Scranton Branch",
+            "children": [
+              {
+                "name": "Michael Scott",
+                "title": "Regional Manager",
+                "group": "Scranton Branch",
+                "children": [
+                  {
+                    "name": "Sales Department",
+                    "title": "",
+                    "group": "Sales Department",
+                    "children": [
+                      { "name": "Jim Halpert", "title": "Sales Rep", "group": "Sales Department" },
+                      { "name": "Dwight Schrute", "title": "Assistant to Regional Manager", "group": "Sales Department" },
+                      { "name": "Phyllis Vance", "title": "Sales Rep", "group": "Sales Department" },
+                      { "name": "Stanley Hudson", "title": "Sales Rep", "group": "Sales Department" },
+                      { "name": "Andy Bernard", "title": "Sales Rep", "group": "Sales Department" }
+                    ]
+                  },
+                  {
+                    "name": "Reception",
+                    "title": "",
+                    "group": "Reception",
+                    "children": [
+                      { "name": "Pam Beesly", "title": "Receptionist", "group": "Reception" },
+                      { "name": "Erin Hannon", "title": "Receptionist", "group": "Reception" }
+                    ]
+                  },
+                  {
+                    "name": "Accounting Department",
+                    "title": "",
+                    "group": "Accounting Department",
+                    "children": [
+                      { "name": "Angela Martin", "title": "Head of Accounting", "group": "Accounting Department" },
+                      { "name": "Oscar Martinez", "title": "Accountant", "group": "Accounting Department" },
+                      { "name": "Kevin Malone", "title": "Accountant", "group": "Accounting Department" }
+                    ]
+                  },
+                  {
+                    "name": "Warehouse",
+                    "title": "",
+                    "group": "Warehouse",
+                    "children": [
+                      { "name": "Darryl Philbin", "title": "Warehouse Foreman", "group": "Warehouse" },
+                      { "name": "Roy Anderson", "title": "Warehouse Staff", "group": "Warehouse" },
+                      { "name": "Madge Madsen", "title": "Warehouse Staff", "group": "Warehouse" },
+                      { "name": "Lonny Collins", "title": "Warehouse Staff", "group": "Warehouse" }
+                    ]
+                  },
+                  {
+                    "name": "HR Department",
+                    "title": "",
+                    "group": "HR Department",
+                    "children": [
+                      { "name": "Toby Flenderson", "title": "HR Rep", "group": "HR Department" },
+                      { "name": "Holly Flax", "title": "HR Rep", "group": "HR Department" }
+                    ]
+                  },
+                  {
+                    "name": "Other Office Roles",
+                    "title": "",
+                    "group": "Other Office Roles",
+                    "children": [
+                      { "name": "Kelly Kapoor", "title": "Customer Service Rep", "group": "Other Office Roles" },
+                      { "name": "Creed Bratton", "title": "Quality Assurance Director", "group": "Other Office Roles" },
+                      { "name": "Meredith Palmer", "title": "Supplier Relations", "group": "Other Office Roles" },
+                      { "name": "Ryan Howard", "title": "Temp / VP Sales", "group": "Other Office Roles" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Utica Branch",
+            "title": "Rival Branch",
+            "group": "Utica Branch",
+            "children": [
+              { "name": "Karen Filippelli", "title": "Branch Manager", "group": "Utica Branch" }
+            ]
+          },
+          {
+            "name": "Nashua Branch",
+            "title": "Branch",
+            "group": "Nashua Branch",
+            "children": [
+              { "name": "Holly Flax", "title": "HR Rep", "group": "Nashua Branch" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

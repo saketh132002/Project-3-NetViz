@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>The Office – Character Interaction Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+  <!-- your dark‐mode overrides + layout CSS -->
+  <link rel="stylesheet" href="interaction_style.css"/>
+  <!-- re-use your character page CSS for sidebar & main layout -->
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar (exactly the same as character.html) -->
+    <aside class="sidebar">
+      <div class="netflix-logo">
+        <img src="icons/netflix-n.png" alt="Netflix Logo"/>
+      </div>
+      <div class="sidebar-content">
+        <h2 class="dashboard-title">The Office Dashboard</h2>
+        <p class="subtitle">
+          Run: Mar 24, 2005 – May 16, 2013<br/>
+          NBC | Mockumentary Comedy
+        </p>
+
+        <nav class="nav-buttons">
+          <a href="index.html"        class="nav-button">
+            <div data-lucide="home"  class="nav-icon"></div>
+            <span>Overview</span>
+          </a>
+          <a href="character.html"    class="nav-button active">
+            <div data-lucide="users" class="nav-icon"></div>
+        <span>Org Chart</span>
+          </a>
+          <a href="interactions.html" class="nav-button">
+            <div data-lucide="play"  class="nav-icon"></div>
+            <span>Explore</span>
+          </a>
+          <a href="phrase.html"       class="nav-button">
+            <div data-lucide="search" class="nav-icon"></div>
+            <span>Phrase Search</span>
+          </a>
+          <a href="cloud.html"        class="nav-button">
+            <div data-lucide="cloud"  class="nav-icon"></div>
+            <span>Word Cloud</span>
+          </a>
+          <a href="charactertiles.html" class="nav-button">
+            <div data-lucide="laugh" class="nav-icon"></div>
+            <span>Meet the people</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1>The Office – Character Interaction Network 📺</h1>
+
+      <div class="controls">
+        <label for="seasonSelect">Select Season:</label>
+        <select id="seasonSelect"></select>
+        <label for="episodeSelect">Select Episode:</label>
+        <select id="episodeSelect"></select>
+        <input id="searchInput" type="text" placeholder="Search character…" />
+      </div>
+
+      <div id="network-graph"></div>
+
+      <div id="info-panel" class="hidden">
+        <button id="close-panel">×</button>
+        <h2 id="info-name"></h2>
+        <p><strong>Total Lines:</strong> <span id="info-lines"></span></p>
+        <p><strong>Top Partners:</strong></p>
+        <ul id="info-partners"></ul>
+      </div>
+    </main>
+  </div>
+
+  <script>lucide.createIcons()</script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Office Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="netflix-logo">
+        <img src="icons/netflix-n.png" alt="Netflix Logo">
+      </div>
+
+      <div class="sidebar-content">
+        <h2 class="dashboard-title">The Office Dashboard</h2>
+        <p class="subtitle">
+          Run: Mar 24, 2005 – May 16, 2013<br/>
+          NBC | Mockumentary Comedy
+        </p>
+
+        <nav class="nav-buttons">
+            <a href="#overviewPage" class="nav-button">
+                <div data-lucide="home" class="nav-icon"></div>
+                <span>Overview</span>
+              </a>
+          <a href="character.html" class="nav-button">
+            <div data-lucide="users" class="nav-icon"></div>
+            <span>Org Chart</span>
+          </a>
+          
+          <a href="interactions.html" class="nav-button">
+            <div data-lucide="play" class="nav-icon"></div>
+            <span>Explore</span>
+          </a>
+          <a href="phrase.html" class="nav-button">
+            <div data-lucide="search" class="nav-icon"></div>
+            <span>Phrase Search</span>
+          </a>
+          <a href="cloud.html" class="nav-button">
+            <div data-lucide="cloud" class="nav-icon"></div>
+            <span>Word Cloud</span>
+          </a>
+          <a href="charactertiles.html" class="nav-button">
+            <div data-lucide="laugh" class="nav-icon"></div>
+            <span>Meet the people</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Pages -->
+      <section id="overviewPage" class="page active">
+        <div class="grid-top">
+          <div id="overviewChart" class="panel">
+            <h3>Top 6 Characters: Lines Spoken</h3>
+            <div id="currentEpisode" style="text-align:center; font-size:18px; margin-top:10px; color:white;">Season 1 - Episode 1</div>
+            <svg id="charBarSvg"></svg>
+          </div>
+          <div id="donutCharts" class="panel">
+            <div id="episodeDonut"></div>
+            <button id="resetBtn">Filter Reset</button>
+            <button id="playBtn">Play</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetAnimBtn">Reset Animation</button>
+            <div id="episodeLegend" class="legend"></div>
+          </div>
+        </div>
+
+        <div class="grid-bottom">
+          <div id="bubbleChart" class="panel">
+            <h3>Character Importance Bubble Chart</h3>
+            <svg id="bubbleSvg"></svg>
+            <div id="bubbleLegend" class="legend"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="characterPage" class="page">
+        <!-- Dunder Mifflin Tree -->
+        <h1>Dunder Mifflin Org Chart</h1>
+        <div class="tree-container">
+          <svg id="characterTree"></svg>
+        </div>
+      </section>
+
+      <section id="episodePage" class="page">
+        <h1 style="color:white;">Episode Page</h1>
+        <!-- Future page -->
+      </section>
+    </main>
+  </div>
+
+  <!-- D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script defer src="character.js"></script>
+  <!-- Main Script -->
+  <script defer src="script.js"></script>
+
+  <!-- Activate Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+
+
+</body>
+</html>

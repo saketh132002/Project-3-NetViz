@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Office – Word Cloud 📺</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- 1) Netflix sidebar & layout styles -->
+
+  <!-- 2) Page-specific overrides -->
+  <link rel="stylesheet" href="cloud.css" />
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+  <!-- Lucide: renders those sidebar icons -->
++ <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="netflix-logo">
+        <img src="icons/netflix-n.png" alt="Netflix Logo"/>
+      </div>
+      <div class="sidebar-content">
+        <h2 class="dashboard-title">The Office Dashboard</h2>
+        <p class="subtitle">
+          Run: Mar 24, 2005 – May 16, 2013<br/>
+          NBC | Mockumentary Comedy
+        </p>
+        <nav class="nav-buttons">
+          <a href="index.html" class="nav-button"><div data-lucide="home" class="nav-icon"></div><span>Overview</span></a>
+          <a href="character.html" class="nav-button"><div data-lucide="users" class="nav-icon"></div><span>Org Chart</span></a>
+          <a href="interactions.html" class="nav-button"><div data-lucide="play" class="nav-icon"></div><span>Explore</span></a>
+          <a href="phrase.html" class="nav-button"><div data-lucide="search" class="nav-icon"></div><span>Phrase Search</span></a>
+          <a href="cloud.html" class="nav-button active"><div data-lucide="cloud" class="nav-icon"></div><span>Word Cloud</span></a>
+          <a href="charactertiles.html" class="nav-button">
+            <div data-lucide="laugh" class="nav-icon"></div>
+            <span>Meet the people</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="page active">
+        <h1>The Office – Word Cloud 📺</h1>
+        <div class="controls" style="text-align:center; margin-bottom:20px;">
+          <label for="character-select" style="color:#fff; margin-right:10px;">Select Character:</label>
+          <select id="character-select"></select>
+          <label for="season-select" style="color:#fff; margin:0 10px;">Select Season:</label>
+          <select id="season-select"></select>
+        </div>
+
+        <div id="word-cloud"   class="panel"></div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="cloud.js">
+  </script>
+  
+</body>
+</html>
