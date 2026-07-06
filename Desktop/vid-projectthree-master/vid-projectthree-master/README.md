@@ -74,8 +74,8 @@ The app loads CSV and JSON files with `d3.csv`/`d3.json`, so it needs to be serv
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
-   cd YOUR-REPO-NAME
+   git clone https://github.com/sakethram132002/Project-3-NetViz.git
+   cd Project-3-NetViz
    ```
 2. Start a local server:
    ```bash
